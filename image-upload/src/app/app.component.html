@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>{{ title }}</h1>
+  <input type="file" (change)="onFileSelected($event)">
+  <button (click)="onUpload()">Upload</button>
+
+  <div *ngIf="imageSpecs" class="specs">
+    <h2>Image Specifications:</h2>
+    <p>Width: {{ imageSpecs.width }} px</p>
+    <p>Height: {{ imageSpecs.height }} px</p>
+    <p>Format: {{ imageSpecs.format }}</p>
+    <p>Mode: {{ imageSpecs.mode }}</p>
+  </div>
+
+  <div *ngIf="errorMessage" class="error">
+    <p>{{ errorMessage }}</p>
+  </div>
+</div>

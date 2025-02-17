@@ -1,0 +1,95 @@
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #1e1e1e;
+    text-align: center;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease;
+}
+
+.container:hover {
+    background-color: #2a2a2a;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #fafffc;
+    text-shadow: 0 0 10px #e7ece9;
+}
+
+input[type="file"] {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #eaf5ef;
+    border-radius: 8px;
+    background-color: #1e1e1e;
+    color: #eff4f2;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+input[type="file"]::file-selector-button {
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #f4f7f5;
+    color: #1e1e1e;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+input[type="file"]::file-selector-button:hover {
+    background-color: #f0fcf5;
+    color: #ffffff;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #c4ead8;
+    color: #1e1e1e;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+    background-color: #00c853;
+    color: #ffffff;
+}
+
+.specs {
+    margin-top: 20px;
+    text-align: left;
+    color: #ffffff;
+}
+
+.specs h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #00e676;
+    text-shadow: 0 0 10px #00e676;
+}
+
+.specs p {
+    margin: 5px 0;
+}
+
+.error {
+    margin-top: 20px;
+    color: #ff5252;
+    font-size: 1.2em;
+}
