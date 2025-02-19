@@ -1,10 +1,12 @@
 import os
 
+from controllers.image_controller import image_bp
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 from PIL import Image
 
 app = Flask(__name__)
+app.register_blueprint(image_bp, url_prefix="/images")
 CORS(app)  # Enable Cross-Origin Resource Sharing (CORS)
 
 # Ensure the upload directory exists
@@ -14,7 +16,7 @@ os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 @app.route("/", methods=["GET"])
 def hello_world():
-    return "Helloooooooooooooooooooooooo, World!"
+    return "Hellooo, World!"
 
 
 @app.route("/api/upload", methods=["POST"])
